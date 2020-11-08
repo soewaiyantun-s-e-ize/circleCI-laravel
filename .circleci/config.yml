@@ -10,8 +10,4 @@ workflows:
   welcome:
     # Run the welcome/run job in its own container
     jobs:
-      steps:
-        - slack/status:
-            success_message: 'yesyes'
-            failure_message: 'nono'
-            webhook: '${SLACK_WEBHOOK}'
+      -welcome/run
